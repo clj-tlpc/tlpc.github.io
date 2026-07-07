@@ -22,7 +22,7 @@ title: "The Lonesome Poets Club"
 email: cassius.l.jones@atomicmail.io 
 description: >- # this means to ignore newlines until "baseurl:" 
   Poetry and stories both long and short. Hosted and written mostly by Cassius Jones. Submissions welcome via email.
-baseurl: "/home" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # set per-deploy; Netlify/GitHub Pages will inject the correct URL
 repository: brennanbrown/purelog 
 twitter: 
