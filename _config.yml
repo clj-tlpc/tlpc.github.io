@@ -1,0 +1,104 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "The Lonesome Poets Club"
+email: cassius.l.jones@atomicmail.io 
+description: >- # this means to ignore newlines until "baseurl:" 
+  Poetry and stories both long and short. Hosted and written mostly by Cassius Jones. Submissions welcome via email.
+baseurl: "/home" # the subpath of your site, e.g. /blog
+url: "" # set per-deploy; Netlify/GitHub Pages will inject the correct URL
+repository: brennanbrown/purelog 
+twitter: 
+github: 
+
+header_image: assets/anonymous_pfp.png
+
+google_analytics:
+comments: false 
+disqus: purelog-jekyll
+
+author: Cassius Jones 
+author_bio: >-
+  Cassius Jones is a pen name for someone who's not brave enough to share what he really thinks and feels. This blog is his outlet to the world where he can write as he chooses.
+
+author_pic: assets/anonymous_pfp.png 
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+permalink: /:title
+
+# Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  per_page: 4
+  permalink: "/page/:num/"
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      author: Cassius Jones 
+      avatar: 
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: post
+      content-type: notes
+  - scope:
+      path: ""
+      type: journals
+    values:
+      layout: journal-entry
+      content-type: journals
+
+# Allows all pages to be put into `_pages` folder
+# for easier navigation and better SEO.
+collections:
+  pages:
+    output: true
+    permalink: /:title
+  poems:
+    output: true
+    permalink: /notes/:title
+  stories:
+    output: true
+    permalink: /journals/:title
+
+# Exclude from processing.
+exclude:
+  - ".jekyll-cache"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "theme"
+  - "sandbox"
