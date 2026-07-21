@@ -1,10 +1,10 @@
 # main links
 main:
-  - title: "home"
+  - title: "Home"
     url: /
       # - title: "blog"
       #url: /blog
-  - title: "poetry"
+  - title: "Poetry"
     url: /poetry
       # - title: "submenu"
       #url: /
